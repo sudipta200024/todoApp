@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoproviderapp/theme_provider.dart';
 import 'package:todoproviderapp/todo_screen.dart';
 import 'package:todoproviderapp/calculator_screen.dart';
 import 'package:todoproviderapp/counter_screen.dart';
@@ -41,7 +43,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         actions: [
           IconButton(
             icon: const Icon(Icons.brightness_6),
-            onPressed:(){},
+            onPressed:(){context.read<ThemeProvider>().toggleTheme();},
           ),
         ],
       ),
